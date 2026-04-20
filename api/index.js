@@ -3,8 +3,8 @@ export default function handler(req, res) {
 
   // Mock dataset (you can expand this)
   const registry = {
-    "client2": { matched_entity: "Client2", source: "internal_registry" },
-    "abc corp": { matched_entity: "ABC Corp", source: "internal_registry" }
+    "client2": { client_Name: "Client2", source: "internal_registry" },
+    "abc corp": { client_Name: "ABC Corp", source: "internal_registry" }
   };
 
   if (!name) {
@@ -22,7 +22,7 @@ export default function handler(req, res) {
       data: {
         input: name,
         known_match: true,
-        matched_entity: match.matched_entity,
+        client_Name: match.client_Name,
         match_source: match.source
       },
       message: "Potential conflict found"
@@ -34,7 +34,7 @@ export default function handler(req, res) {
     data: {
       input: name,
       known_match: false,
-      matched_entity: null,
+      client_Name: null,
       match_source: null
     },
     message: "No conflict detected"
