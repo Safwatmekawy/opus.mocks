@@ -11,7 +11,7 @@ export default function handler(req, res) {
 
   // 🧠 Mock PO Database
   const poDB = {
-    "PO22": {
+    "PO-22": {
       status: "OPEN",
       total_value: 1500,
       line_items: [
