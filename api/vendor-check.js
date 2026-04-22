@@ -22,11 +22,11 @@ export default function handler(req, res) {
 
   // 🧠 Mock vendor registry
   const vendorRegistry = [
-    "Safwat",
+    "amazon",
     "microsoft",
     "google",
     "oracle",
-    "sap"
+    "safwat mekawy"
   ];
 
   const vendor_exist = vendorRegistry.includes(normalized_name);
